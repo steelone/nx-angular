@@ -16,9 +16,18 @@
   "npmScope": "bike-store",
   "tasksRunnerOptions": {
     "default": {
-      "runner": "@nrwl/workspace/tasks-runners/default",
+      "runner": "@nrwl/nx-cloud",
       "options": {
-        "cacheableOperations": ["build", "lint", "test", "e2e"]
+        "cacheableOperations": [
+          "build",
+          "lint",
+          "test",
+          "e2e",
+          "build-storybook"
+        ],
+        "accessToken": "OWM5ZGFjNjUtNTk2Ni00ZDdhLTk4ZGItNTJkZGIxZGE5ZjA4fHJlYWQtd3JpdGU=",
+        "canTrackAnalytics": false,
+        "showUsageWarnings": true
       }
     }
   },
@@ -28,7 +37,18 @@
     },
     "bike-store-e2e": {
       "tags": [],
-      "implicitDependencies": ["bike-store"]
+      "implicitDependencies": [
+        "bike-store"
+      ]
+    },
+    "header": {
+      "tags": []
+    },
+    "header-e2e": {
+      "tags": [],
+      "implicitDependencies": [
+        "header"
+      ]
     }
   }
 }
